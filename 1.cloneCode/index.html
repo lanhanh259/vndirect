@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protrade trial</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="">
+        <div class="header__logo">
+            <a href="header__logo-link">
+                <img class="header__logo-img" src="./assets/img/logo.svg" alt="logo">
+            </a>
+        </div>
+        <div id="header__clock">
+            <span class="header__clock-item header__clock__time">15:43:45</span>
+            <span class="header__clock-item header__clock__date">2021/12/20</span>
+        </div>
+        <div id="header__horizontal-menu">
+            <ul class=" header__horizontal-item horizontal-menu__list">
+                <li class="horizontal-menu__item"><a href="" class="horizontal-menu__item-link active">Trang chủ</a>
+                </li>
+                <li class="horizontal-menu__item"><a href="" class="horizontal-menu__item-link">Tài sản</a></li>
+                <li class="horizontal-menu__item"><a href="" class="horizontal-menu__item-link">Hướng dẫn</a></li>
+            </ul>
+            <!-- Mất lợi nhuận -->
+            <div class="header__horizontal-item header__profitloss">
+                <span>Lãi/Lỗ:</span>
+                <span class="profitloss__number">0</span>
+            </div>
+        </div>
+        <div id="profitloss__top">
+            <span class="profitloss__top">
+                <a class="profitloss__top-link" href="">
+                    <i class="fas fa-trophy"></i>
+                    Top cao thủ phái sinh
+                </a>
+            </span>
+        </div>
+
+        <div id="header__menu">
+            <div class="header__menu-item menu__trial"><span>BẢN TRIAL</span></div>
+            <div class="header__menu-item menu__btn">
+                <a class="menu__btn-link" href="https://myaccount.vndirect.com.vn/account-info?tab=account-register"
+                    target="_blank">Nâng cấp tài khoản</a>
+            </div>
+            <div class="header__menu-item menu__account">
+                <div>
+                    <i class="fas fa-user"></i>
+                    <span>Nguyễn Lân Hạnh</span>
+                    <i class="fas fa-angle-down"></i>
+                </div>
+                <div class="menu__account-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Log out
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <div id="app">
+        <div id="home">
+            <div id="c-2">
+                <div class="chart">
+                    <iframe
+                        src="https://dchart.vndirect.com.vn/?theme=dark&timeframe=1&disableSyncSymbol=true&symbol=VN30F1M&domain=https://protrade-trial.vndirect.com.vn&t=function%20now()%20{%20[native%20code]%20}"
+                        title="Chart" width="100%" height="100%">
+                    </iframe>
+                </div>
+                <div class="market">
+                    <div class="market__charts">
+                        <iframe src="https://mkw.vndirect.com.vn/leader_lagger?color=gray&amp;height=280" title="Chart"
+                            width="100%" height="100%">
+                        </iframe>
+                    </div>
+
+                    <div class="market__menus">
+                        <div class="active">VN30 INTRADAY</div>
+                        <div>VN30</div>
+                        <div>
+                            <i class="fa fa-bar-chart"></i>
+                        </div>
+                        <div>
+                            <i class="fa fa-pie-chart"></i>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="c-1">
+
+                <!-- HISTORY -->
+                <div class="history">
+                    <!--  HISTORY heading -->
+                    <div class="history__heading">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="symlbol">VN30F2201</td>
+                                    <td>
+                                        <span>Sàn</span>
+                                        <br>
+                                        <span class="history__heading-number">1402.5</span>
+                                        <div class="history__heading-sudo">Click đúp để đặt lệnh</div>
+                                    </td>
+                                    <td>
+                                        <span>TC: </span>
+                                        <br>
+                                        <span class="history__heading-number">1508.0</span>
+                                        <div class="history__heading-sudo">Click đúp để đặt lệnh</div>
+                                    </td>
+                                    <td>
+                                        <span>Trần: </span>
+                                        <br>
+                                        <span class="history__heading-number">1613.5</span>
+                                        <div class="history__heading-sudo">Click đúp để đặt lệnh</div>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--  HISTORY body -->
+                    <div class="history__body">
+                        <div class="history__body-tab">
+                            <div class="history__body-tab-item active"><span>Bước giá</span></div>
+                            <div class="history__body-tab-item"><span>Lịch sử khớp lệnh</span></div>
+                        </div>
+                        <div class="history__body-content active">
+                            <div class="history__body-content__heading">
+                                <div>KL Mua</div>
+                                <div>Giá Mua</div>
+                                <div class="border-start">Giá Bán</div>
+                                <div>KL Bán</div>
+                            </div>
+                            <div class="history__body-content__table history__body-content__table-1">
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">28</div>
+                                    <div class="history__body-content__table-col txt-red">1512.5</div>
+                                    <div class="history__body-content__table-col txt-red">1512.9</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">45</div>
+                                    <div class="history__body-content__table-col txt-red">1512.4</div>
+                                    <div class="history__body-content__table-col txt-red">1513.0</div>
+                                    <div class="history__body-content__table-col">60</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">33</div>
+                                    <div class="history__body-content__table-col txt-red">1512.3</div>
+                                    <div class="history__body-content__table-col txt-red">1513.1</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">26</div>
+                                    <div class="history__body-content__table-col txt-red">1512.2</div>
+                                    <div class="history__body-content__table-col txt-red">1513.2</div>
+                                    <div class="history__body-content__table-col">2</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">28</div>
+                                    <div class="history__body-content__table-col txt-red">1512.5</div>
+                                    <div class="history__body-content__table-col txt-red">1512.9</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">33</div>
+                                    <div class="history__body-content__table-col txt-red">1512.3</div>
+                                    <div class="history__body-content__table-col txt-red">1513.1</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">26</div>
+                                    <div class="history__body-content__table-col txt-red">1512.2</div>
+                                    <div class="history__body-content__table-col txt-red">1513.2</div>
+                                    <div class="history__body-content__table-col">2</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">28</div>
+                                    <div class="history__body-content__table-col txt-red">1512.5</div>
+                                    <div class="history__body-content__table-col txt-red">1512.9</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">33</div>
+                                    <div class="history__body-content__table-col txt-red">1512.3</div>
+                                    <div class="history__body-content__table-col txt-red">1513.1</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">26</div>
+                                    <div class="history__body-content__table-col txt-red">1512.2</div>
+                                    <div class="history__body-content__table-col txt-red">1513.2</div>
+                                    <div class="history__body-content__table-col">2</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">28</div>
+                                    <div class="history__body-content__table-col txt-red">1512.5</div>
+                                    <div class="history__body-content__table-col txt-red">1512.9</div>
+                                    <div class="history__body-content__table-col">5</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="history__body-content ">
+                            <div class="history__body-content__heading">
+                                <div class="border-start">TG</div>
+                                <div class="border-start">Giá</div>
+                                <div class="border-start">+/-</div>
+                                <div class="border-start">KL</div>
+                                <div class="border-start">KL tích lũy</div>
+
+                            </div>
+                            <div class="history__body-content__table history__body-content__table-2">
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col txt-red">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                                <div class="history__body-content__table-row">
+                                    <div class="history__body-content__table-col">14:45:19</div>
+                                    <div class="history__body-content__table-col">1512.5</div>
+                                    <div class="history__body-content__table-col">4.5</div>
+                                    <div class="history__body-content__table-col">3,548</div>
+                                    <div class="history__body-content__table-col">113,617</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- WATCHLIST -->
+                <div class="watchlist">
+                    <div class="watchlist__body-content">
+                        <div class="watchlist__body-content__heading">
+                            <div>Mã</div>
+                            <div>Giá</div>
+                            <div>
+                                <i class="fas fa-caret-left"></i>
+                                +/- 
+                                <i class="fas fa-caret-right"></i>
+                            </div>
+                            <div>Lệch</div>
+                            <div>Tổng KL</div>
+                        </div>
+                        <div class="watchlist__body-content__table">
+                            <div class="watchlist__body-content__table-row">
+                                <div class="watchlist__body-content__table-col txt-red">VN30F2201</div>
+                                <div class="watchlist__body-content__table-col txt-red">1,508</div>
+                                <div class="watchlist__body-content__table-col txt-red">-4.5</div>
+                                <div class="watchlist__body-content__table-col txt-green">3.88</div>
+                                <div class="watchlist__body-content__table-col">125,182</div>
+                            </div>
+                            <div class="watchlist__body-content__table-row">
+                                <div class="watchlist__body-content__table-col txt-red">VN30F2202</div>
+                                <div class="watchlist__body-content__table-col txt-red">1,510.6</div>
+                                <div class="watchlist__body-content__table-col txt-red">-4.2</div>
+                                <div class="watchlist__body-content__table-col txt-green">6.48</div>
+                                <div class="watchlist__body-content__table-col">125,182</div>
+                            </div>
+                            <div class="watchlist__body-content__table-row">
+                                <div class="watchlist__body-content__table-col txt-red">VN30F2203</div>
+                                <div class="watchlist__body-content__table-col txt-red">1,504.1</div>
+                                <div class="watchlist__body-content__table-col txt-red">-6.8</div>
+                                <div class="watchlist__body-content__table-col txt-red">-0.02</div>
+                                <div class="watchlist__body-content__table-col">125,182</div>
+                            </div>
+                            <div class="watchlist__body-content__table-row">
+                                <div class="watchlist__body-content__table-col txt-red">VN30F2206</div>
+                                <div class="watchlist__body-content__table-col txt-red">1,505</div>
+                                <div class="watchlist__body-content__table-col txt-red">-7,1</div>
+                                <div class="watchlist__body-content__table-col txt-green">0.88</div>
+                                <div class="watchlist__body-content__table-col">52</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="c-3">
+                <!-- ORDER BOOK -->
+                <div class="orderbook">
+                    <div class="orderbook-heading">
+                        <div class="orderbook-heading__item active">Lệnh trong ngày</div>
+                        <div class="orderbook-heading__item">Lệnh điều kiện</div>
+                        <div class="orderbook-heading__icon">
+                            <i class="fas fa-sync-alt"></i>
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                    <div class="orderbook-body">
+                        <div class="orderbook-body-heading">
+                            <div>
+                                <div>Lệnh</div>
+                                <div>Mã</div>
+                            </div>
+                            <div>
+                                <div>KL Khớp</div>
+                                <div>Giá</div>
+                                <div>TT</div>
+                            </div>
+                        </div>
+                        <div class="orderbook-body-content">
+                            <div>Chưa có lệnh nào trong sổ lệnh</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="placeorder">
+                    <div class="place-form">
+                        <div class="place-form__heading">
+                            <div>
+                                <input type="radio" name="" id="">
+                                <span>Lệnh thường</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="" id="">
+                                <span>Lệnh Stop</span>
+                            </div>
+                            <div>
+                                <input type="radio" name="" id="">
+                                <span>Lệnh trailing</span>
+                            </div>
+                            <div>
+                                <input type="radio" name="" id="">
+                                <span>Lệnh OSO</span>
+                            </div>
+                        </div>
+                        <div class="place-form__body place-form__body-1">
+                            <div class="r-1">
+                                <label for="">Mã HĐTL: </label>
+                                <div>
+                                    <input class="form-control" type="text" name="" value="VN30F2201" id=""placeholder="Mã">
+                                    <ul>
+                                        <li>VN30F2201</li>
+                                        <li>VN30F2202</li>
+                                        <li>VN30F2203</li>
+                                        <li>VN30F2206</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="r-2">
+                                <label for="">Giá đặt:  </label>
+                                <div>
+                                    <input class="form-control" type="text" name="" id="" placeholder="Giá">
+                                    <ul>
+                                        <li> <span>ATO</span></li>
+                                        <li> <span>ATC</span></li>
+                                        <li> <span>MTL</span></li>
+                                        <li> <span>MOK</span></li>
+                                        <li> <span>MAK</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="r-3">
+                                <label for="">Khối lượng:  </label>
+                                <div >
+                                    <input class="form-control" type="text" name="" id="" placeholder="KL">
+                                    <ul>
+                                        <li>KL mua tối đa: <span class="txt-orange">0</span></li>
+                                        <li class="p-start-24">KL bán tối đa: <span class="txt-orange">0</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="place-form__body place-form__body-2 active">
+                            <div class="r-1">
+                                <label for="">Mã HĐTL: </label>
+                                <div>
+                                    <input class="form-control" type="text" name="" value="VN30F2201" id=""placeholder="Mã">
+                                    <ul>
+                                        <li>VN30F2201</li>
+                                        <li>VN30F2202</li>
+                                        <li>VN30F2203</li>
+                                        <li>VN30F2206</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="r-2">
+                                <label for="">Giá đặt:  </label>
+                                <div>
+                                    <input class="form-control" type="text" name="" id="" placeholder="Giá">
+                                </div>
+                            </div>
+                            <div class="r-3">
+                                <label for="">Khối lượng:</label>
+                                <input class="form-control" type="text" name="" id="" placeholder="KL">
+                            </div>
+                            <div class="r-4">
+                                <label for="">Khi giá khớp:</label>
+                                <div class="r-4-item">
+                                    <button class="bg-orange"><span>&#8804;</span></button>
+                                    <button><span>&#8805;</span></button>
+                                    <input class="form-control" type="text" name="" id="" placeholder="Giá kích hoạt">
+                                </div>
+                            </div>
+                            <div class="r-5">
+                                <label for="">Ngày hết hạn:</label>
+                            </div>
+                        </div>
+                        <div class="place-form__button">
+                            <button class="form-button bg-red">MUA</button>
+                            <button class="form-button bg-green">BÁN</button>
+                            <span>
+                                <input type="checkbox" name="" id="">
+                                Lưu lệnh
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="active">Sổ lệnh</div>
+                <div>Danh mục</div>
+                <div>Tài sản</div>
+            </div>
+            <div class="footer-asset">
+                <span>Bản quyền thuộc về VNDIRECT ©2021 . v 2.2.2</span>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

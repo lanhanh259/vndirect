@@ -1,0 +1,10 @@
+@media (max-width:1200px) {
+ #profitloss__top{
+     display: none;
+     /* flex:0; */
+ }
+ #header__menu{
+    flex: 1;
+    justify-content: flex-end;
+ }
+}
